@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- icons link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+
+  <body>
+    <!-- main content -->
+    
+      <div class="main-content">
+
+        <section id="home">
+          <div class="home">
+            <div class="home-content">
+              <h1 class="tt">Hi, I'm Derek Britton</h1>
+              <p class="txt1">A Oriented Web Developer building and managing Websites<br> 
+                and Applications that leads to the success of the overall 
+                product
+              </p>
+              <a href="#" class="btn">Projects</a>
+            </div>
+          </div>
+        </section>
+        
+        <section id="about">
+          <div class="title-about">
+            <h1 class="tt2">About Me</h1>
+              <span class="tt2-sub">
+                Here you will find more information about me, 
+                what I do, and my current skills mostly in 
+                terms of programming and technology
+              </span>
+          </div>
+            <div class="about-content">
+            <div class="about-container">
+              <div class="about-text">
+                <h3>Who am I?</h3>
+                <p>
+                  I'm a software developer who builds and manages the front-end 
+                  of websites and applications that lead to overall product success. 
+                  Check out some of my work in the Projects section. 
+                </p>
+                <p>
+                  I am open to job/project opportunities where I can contribute, 
+                  learn and grow. If you have a good opportunity that matches my skills 
+                  and experience, then feel free to contact me.
+                </p>
+              </div>
+            
+            
+            <div class="skills-content">
+              <h3>Skills</h3>
+              <div class="skills-list">
+                <div class="skill">
+                  <i class="fa-brands fa-html5"></i>
+                  <span>HTML</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <span>CSS</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-solid fa-rocket"></i>
+                  <span>Astro</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-git-alt"></i>
+                  <span>Git</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Github</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-figma"></i>
+                  <span>Figma</span>
+                </div>
+                <div class="skill">
+                  <i class="fa-brands fa-java"></i>
+                  <span>Java</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section id="projects">
+          <h2 class="tt2">Projects</h2>
+          <div class="projects-container">
+            <div class="project-card">
+              <img src="/Port-demo/public/port.png" alt="Proyecto 1" class="project-image">
+              <div class="project-description">
+                <p>Portafolio.</p>
+                <a href="https://proyecto-ds-5.vercel.app/" class="btn">Ver Proyecto</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/Port-demo/public/ecommers.png" alt="Proyecto 2" class="project-image">
+              <div class="project-description">
+                <p>E-Commerce.</p>
+                <a href="https://proyecto-ds-5.vercel.app/" class="btn">Ver Proyecto</a>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2 class="tt2">Contact</h2>
+          <div class="contact-container">
+            
+            <form action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn">Enviar</button>
+            </form>
+          </div>
+        </section>
+        
+      </div>
+    
+
+    <!-- menu links -->
+  <div class="main-menu">
+
+      <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+          <h1 class="menu-header">Derek</h1>
+
+          <div class="menu-item nav-active" data-tooltip="Home">
+            <a href="#home">
+                <i class='bx bx-home-alt'></i>
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="menu-item" data-tooltip="About Me">
+            <a href="#about">
+                <i class="fa-regular fa-address-card"></i>
+                <span>About Me</span>
+            </a>
+        </div>
+        
+        <div class="menu-item" data-tooltip="Projects">
+            <a href="#projects">
+                <i class="bx bx-folder-open"></i>
+                <span>Projects</span>
+            </a>
+        </div>
+          <div class="menu-item" data-tooltip="Contact">
+            <a href="#contact">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+          </div>
+      
+
+          <h1 class="menu-header shortcuts">Social</h1>
+          <div class="menu-item" data-tooltip="Linkedin">
+            <a href="https://www.linkedin.com/in/derek-britton-869735320/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            <span>Linkedin</span>
+            </a>
+          </div>
+
+          <div class="menu-item" data-tooltip="Github">
+            <a href="https://github.com/Drek003" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            <span>Github</span>
+          </a>
+          </div>
+        </nav>
+        <!-- toggle menu -->
+        
+      </aside>
+    </div>
+    
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

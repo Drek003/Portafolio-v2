@@ -1,0 +1,453 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+
+body {
+  display: flex;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.5s ease;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 25px;
+}
+
+.tt {
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #111;
+  font-weight: 800;
+}
+.txt1 {
+  color: #333;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.btn {
+  background-color: #2f323a; /* Same as .main-menu background */
+  color: #fff;  /* Text color from variables */
+  padding: 10px 20px;
+  border-radius: 50px;       /* Rounded corners */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--menu-item-hover-bg);
+  color: var(--menu-item-hover-color);
+}
+
+.tt2 {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: #111;
+}
+.tt2-sub {
+  display: block;
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 50rem;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.title-about {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  min-height: 20vh;
+  margin-top: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  min-height: 30vh;
+  margin-left: 150px;
+  margin-top: 50px;
+  
+}
+.about-content h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: #111;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; /* Space between columns */
+  max-width: 1200px; /* Adjust as needed */
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the container */
+}
+
+/* About Text Styling */
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h1.tt2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-text .tt2-sub {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Skills Content Styling */
+.skills-content {
+  flex: 1;
+}
+
+.skills-content h3 {
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; /* Adjust size as needed */
+}
+
+.skill i {
+  font-size: 3rem;
+  color: #2f323a; /* Icon color */
+  margin-bottom: 10px;
+}
+
+.skill span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .skills-content {
+    width: 100%;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+}
+
+#projects {
+  padding: 30px 85px;
+  background-color: #00000009;
+  margin: 150px;
+  
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(50% - 20px); /* Cambia el ancho para que ocupe el 50% del contenedor */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-description {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-description p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+@media (max-width: 992px) {
+  .project-card {
+    width: calc(50% - 20px); /* Mantén el ancho al 50% para pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+  }
+}
+
+.contact-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 10;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  margin: 50px 0 0 0; /* Elimina márgenes laterales y mantiene el margen inferior */
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2f323a;
+  outline: none;
+}
+
+#contact .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.main-menu {
+  position: fixed;
+  left: 10px;
+  top: 55px;
+  width: 80px; /* Ajusta el ancho según tus necesidades */
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  border-radius: 100px; /* Bordes redondeados en la derecha */
+  background-color: #2f323a;
+}
+
+/* Color Variables */
+:root {
+  --text-color: #fff;
+  --menu-item-color: rgb(188, 186, 186);
+  --menu-item-hover-bg: rgb(117, 109, 109);
+  --menu-item-hover-color: #fff;
+  --menu-header-color: rgb(137, 135, 135);
+  --tooltip-bg: rgba(0, 0, 0, 0.8);
+  --border-color: rgb(218, 147, 147);
+}
+.main-menu .menu-item a i {
+  color: #ffffff83;
+}
+
+.logo,
+.menu-item,
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: justify-content 0.5s ease;
+}
+.logo {
+  margin-top: 30px;
+}
+
+.logo i,
+.menu-item i,
+.logout i {
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+
+.logo span,
+.menu-item span,
+.logout span {
+  margin-left: 10px;
+  display: none;
+  transition: 0.5s ease;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.menu-header {
+  color: var(--menu-header-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: var(--menu-item-color);
+  transition: all 0.5 ease;
+}
+
+.menu-item:hover,
+.nav-active,
+.logout:hover {
+  background: var(--menu-item-hover-bg);
+  color: var(--menu-item-hover-color);
+  transition: 0.5s ease;
+}
+
+.menu-item i,
+.logout i {
+  font-size: 20px;
+}
+
+
+/* menu item tooltip */
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--tooltip-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+[data-tooltip]:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--tooltip-bg) transparent transparent;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sidebar:not(.active) [data-tooltip]:hover::before,
+.sidebar:not(.active) [data-tooltip]:hover::after {
+  opacity: 1;
+}
+.logout[data-tooltip]::before {
+  left: 120%;
+}
+.logout[data-tooltip]::after {
+  left: 100%;
+}
+
+
+
