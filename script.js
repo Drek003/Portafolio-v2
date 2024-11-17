@@ -24,11 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = item.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
+        const href = item.getAttribute('href');
+        // Solo aplicar scroll suave a enlaces internos
+        if (href.startsWith('#')) {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
     });
 });

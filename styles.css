@@ -279,6 +279,46 @@ body {
   }
 }
 
+.documents-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Estilos para las cartas de documentos */
+.document-card {
+  background-color: var(--color3);
+  border: 1px solid var(--color4);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.document-card p {
+  color: var(--color5);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.document-card .btn {
+  background-color: var(--color4);
+  color: var(--color1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.document-card .btn:hover {
+  background-color: var(--color5);
+  color: var(--color1);
+}
+
 .contact-container {
   max-width: 400px;
   width: 100%;
