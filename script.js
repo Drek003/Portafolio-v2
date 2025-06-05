@@ -37,4 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Project preview hover effect
+    const projectItems = document.querySelectorAll('.project-list-item');
+    const previewImg = document.getElementById('preview-img');
+    const previewBox = document.getElementById('project-preview');
+
+    projectItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const imgSrc = item.getAttribute('data-img');
+            previewImg.src = imgSrc;
+            previewImg.style.opacity = 1;
+        });
+        item.addEventListener('mouseleave', () => {
+            previewImg.src = '';
+            previewImg.style.opacity = 0;
+        });
+    });
 });
