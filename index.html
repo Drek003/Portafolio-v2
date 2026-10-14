@@ -5,6 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Derek Britton — Portafolio</title>
+  <meta name="description"
+    content="Derek Britton, desarrollador de software. Construyo sitios web y aplicaciones funcionales y con impacto.">
+  <meta name="theme-color" content="#060b17">
+  <meta property="og:title" content="Derek Britton — Portafolio">
+  <meta property="og:description" content="Desarrollador de software. Proyectos, skills y contacto.">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23060b17'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%2300b8f0'%3EDB%3C/text%3E%3C/svg%3E">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
@@ -15,74 +28,107 @@
 
 <body>
 
-  <button class="sidebar-toggle" id="menuToggle" aria-label="Toggle menu">
-    <i class="bx bx-menu"></i>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- DK3: asistente animado (avatar.js) -->
+  <div class="dk3" id="dk3">
+    <span class="dk3-glow" aria-hidden="true"></span>
+    <span class="dk3-shadow" aria-hidden="true"></span>
+    <div class="dk3-lean">
+      <div class="dk3-float">
+        <button type="button" class="dk3-body" id="dk3Body" aria-label="DK3, el asistente de Derek. Haz click para saludarlo"></button>
+      </div>
+    </div>
+  </div>
+  <div class="dk3-bubble" id="dk3Bubble" aria-hidden="true"></div>
+
+  <button class="sidebar-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"
+    aria-controls="sidebar">
+    <i class="bx bx-menu" aria-hidden="true"></i>
   </button>
+  <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
 
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">DB</div>
-    <nav class="sidebar-nav">
+    <a href="#home" class="sidebar-brand" aria-label="Derek Britton — inicio">DB</a>
+    <nav class="sidebar-nav" aria-label="Secciones">
       <a href="#home" class="nav-item active" data-label="Inicio">
-        <i class="bx bx-home-alt"></i>
+        <i class="bx bx-home-alt" aria-hidden="true"></i>
         <span class="nav-label">Inicio</span>
       </a>
       <a href="#about" class="nav-item" data-label="Sobre mí">
-        <i class="fa-regular fa-address-card"></i>
+        <i class="fa-regular fa-address-card" aria-hidden="true"></i>
         <span class="nav-label">Sobre mí</span>
       </a>
+      <a href="#experience" class="nav-item" data-label="Experiencia">
+        <i class="bx bx-briefcase-alt-2" aria-hidden="true"></i>
+        <span class="nav-label">Experiencia</span>
+      </a>
       <a href="#skills" class="nav-item" data-label="Skills">
-        <i class="bx bx-code-alt"></i>
+        <i class="bx bx-code-alt" aria-hidden="true"></i>
         <span class="nav-label">Skills</span>
       </a>
       <a href="#projects" class="nav-item" data-label="Proyectos">
-        <i class="bx bx-folder-open"></i>
+        <i class="bx bx-folder-open" aria-hidden="true"></i>
         <span class="nav-label">Proyectos</span>
       </a>
       <a href="#contact" class="nav-item" data-label="Contacto">
-        <i class="fa-regular fa-envelope"></i>
+        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
         <span class="nav-label">Contacto</span>
       </a>
     </nav>
     <div class="sidebar-social">
-      <a href="https://www.linkedin.com/in/derek-britton-869735320/" target="_blank" class="nav-item"
-        data-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
+      <a href="https://www.linkedin.com/in/derek-britton-869735320/" target="_blank" rel="noopener noreferrer"
+        class="nav-item" data-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
         <span class="nav-label">LinkedIn</span>
       </a>
-      <a href="https://github.com/Drek003" target="_blank" class="nav-item" data-label="GitHub">
-        <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/Drek003" target="_blank" rel="noopener noreferrer" class="nav-item"
+        data-label="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
         <span class="nav-label">GitHub</span>
       </a>
-      <a href="https://linktr.ee/derekbritton" target="_blank" class="nav-item" data-label="Linktree">
-        <i class="fa-regular fa-address-book"></i>
+      <a href="https://linktr.ee/derekbritton" target="_blank" rel="noopener noreferrer" class="nav-item"
+        data-label="Linktree">
+        <i class="fa-regular fa-address-book" aria-hidden="true"></i>
         <span class="nav-label">Linktree</span>
       </a>
     </div>
   </aside>
 
-  <div class="main-content">
+  <main class="main-content" id="main">
 
     <section id="home">
       <div class="hero-content">
-        <div class="hero-eyebrow reveal">Desarrollador de Software</div>
-        <h1 class="hero-title reveal">
-          Hola, soy <span class="accent">Derek Britton</span>
+        <div class="dk3-slot" id="dk3Slot" aria-hidden="true"></div>
+        <div class="hero-eyebrow" style="--d: 0.1s">
+          <span>Desarrollador de Software</span><span class="caret" aria-hidden="true">_</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line"><span style="--d: 0.25s">Hola, soy</span></span>
+          <span class="line"><span class="accent" style="--d: 0.4s">Derek Britton</span></span>
         </h1>
-        <p class="hero-desc reveal">
+        <p class="hero-desc" style="--d: 0.6s">
           Construyo y gestiono sitios web y aplicaciones que impulsan
           el éxito del producto en general. Enfocado en crear experiencias
           digitales funcionales y con impacto.
         </p>
-        <div class="hero-actions reveal">
-          <a href="#projects" class="btn btn-primary">
+        <div class="hero-actions" style="--d: 0.75s">
+          <a href="#projects" class="btn btn-primary magnetic">
             <span>Ver proyectos</span>
-            <i class="bx bx-arrow-right"></i>
+            <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
           </a>
-          <a href="#contact" class="btn btn-outline">
+          <a href="#contact" class="btn btn-outline magnetic">
             <span>Contactar</span>
           </a>
         </div>
       </div>
+      <a href="#about" class="scroll-cue" aria-label="Bajar a Sobre mí">
+        <span class="scroll-cue-mouse"><span></span></span>
+        <span class="scroll-cue-label">Scroll</span>
+      </a>
     </section>
 
     <section id="about">
@@ -97,9 +143,13 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <h3>¿Quién soy?</h3>
+          <div class="about-degree">
+            <i class="bx bxs-graduation" aria-hidden="true"></i>
+            <span>Téc. en Ing. con Esp. en Desarrollo y Gestión de Software</span>
+          </div>
           <p>
-            Soy un estudiante de desarrollo de software que construye y gestiona
-            sitios web y aplicaciones que conducen al éxito general del producto.
+            Soy Desarrollador Freelancer: construyo y gestiono sitios web y
+            aplicaciones que conducen al éxito general del producto.
             Me apasiona crear soluciones digitales que combinan funcionalidad
             con una experiencia de usuario cuidada.
           </p>
@@ -109,7 +159,108 @@
             coincida con mis habilidades, no dudes en contactarme.
           </p>
         </div>
+        <div class="code-card reveal spotlight" style="--d: 0.15s" aria-label="Resumen de perfil en código">
+          <div class="code-card-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <em>derek.js</em>
+          </div>
+<pre class="code-card-body"><code><span class="tk-k">const</span> <span class="tk-v">derek</span> = {
+  rol: <span class="tk-s">'Desarrollador Freelancer'</span>,
+  frontend: [<span class="tk-s">'Vue'</span>, <span class="tk-s">'React'</span>],
+  backend: [<span class="tk-s">'PHP'</span>, <span class="tk-s">'Laravel'</span>, <span class="tk-s">'Python'</span>],
+  idiomas: [<span class="tk-s">'Español'</span>, <span class="tk-s">'Inglés'</span>],
+  disponible: <span class="tk-b">true</span>,
+};<span class="caret" aria-hidden="true">_</span></code></pre>
+        </div>
       </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Trayectoria</div>
+        <h2 class="section-title">Experiencia Profesional</h2>
+        <p class="section-sub">
+          Los lugares y proyectos donde he puesto en práctica lo que sé.
+        </p>
+      </div>
+
+      <ol class="timeline" id="timeline">
+        <li class="timeline-item reveal">
+          <span class="timeline-dot is-current" aria-hidden="true"></span>
+          <article class="timeline-card spotlight">
+            <header class="timeline-head">
+              <div>
+                <h3 class="timeline-role">Desarrollador Full-Stack Freelancer</h3>
+                <p class="timeline-org">Servicios de software Full Stack</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">
+                  <span class="badge-live" aria-hidden="true"></span>
+                  Oct 2025 — Actualidad
+                </span>
+                <span class="timeline-place"><i class="bx bx-map" aria-hidden="true"></i> Panamá</span>
+              </div>
+            </header>
+
+            <div class="timeline-project">
+              <h4>Sistemas de gestión gubernamentales</h4>
+              <p>
+                Desarrollo full-stack con C# y MariaDB/MySQL, implementando un backend robusto y APIs para
+                gestión de noticias internas, departamentos, usuarios/empleados, directorio telefónico,
+                repositorio de documentos y RBAC (Role-Based Access Control).
+              </p>
+              <p>
+                Actualmente refactorizando el sistema de tickets de soporte con asignación automática de
+                técnicos por flujos de trabajo.
+              </p>
+            </div>
+
+            <div class="timeline-project">
+              <h4>WareLogic Solutions <span>· Gestión de almacenes</span></h4>
+              <p>
+                Gestión de una aplicación full-stack en PHP Laravel para almacenes (warehouse): inventarios,
+                reportes y optimización de flujos logísticos.
+              </p>
+            </div>
+
+            <ul class="timeline-tags" aria-label="Tecnologías">
+              <li>C#</li><li>MariaDB</li><li>MySQL</li><li>APIs REST</li><li>RBAC</li><li>PHP</li><li>Laravel</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="timeline-item reveal">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <article class="timeline-card spotlight">
+            <header class="timeline-head">
+              <div>
+                <h3 class="timeline-role">Pasante — Desarrollador Full Stack</h3>
+                <p class="timeline-org">Universidad Tecnológica de Panamá (DITIC)</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">Jun 2025 — Sep 2025</span>
+                <span class="timeline-place"><i class="bx bx-map" aria-hidden="true"></i> Panamá</span>
+              </div>
+            </header>
+
+            <ul class="timeline-points">
+              <li>
+                Microservicio completo para la gestión integral de noticias, con un flujo de trabajo editorial
+                robusto, versionado automático y control de acceso granular.
+              </li>
+              <li>
+                Workflow de 3 fases que automatiza el proceso editorial, desde el borrador hasta la publicación
+                final, con versionado inteligente que distingue cambios mayores de menores y conserva el
+                historial completo de modificaciones.
+              </li>
+            </ul>
+
+            <ul class="timeline-tags" aria-label="Tecnologías">
+              <li>Flask</li><li>Python</li><li>Vue.js</li><li>MariaDB</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
     </section>
 
     <section id="skills">
@@ -121,21 +272,17 @@
         </p>
       </div>
 
-      <!-- Category selector -->
       <div class="skills-layout">
-        <div class="category-selector reveal" id="categorySelector">
+        <div class="category-selector reveal" id="categorySelector" role="group" aria-label="Categorías de skills">
           <!-- buttons injected by JS -->
         </div>
 
-        <!-- Tech cards container -->
-        <div class="tech-cards-container reveal" id="techCardsContainer">
+        <div class="tech-cards-container reveal" id="techCardsContainer" aria-live="polite">
           <!-- cards injected by JS -->
         </div>
       </div>
 
-      <!-- Additional skills -->
-      <div class="additional-skills reveal">
-        <!-- <h3 class="additional-skills-title">Más habilidades</h3> -->
+      <div class="additional-skills">
         <div class="additional-grid" id="additionalGrid">
           <!-- injected by JS -->
         </div>
@@ -152,35 +299,41 @@
       </div>
       <div class="projects-layout">
         <div class="projects-list" id="projectList">
-          <div class="project-item active" data-img="/Portafolio-v2/public/gestor.png">
+          <div class="project-item reveal spotlight active" style="--d: 0s" data-img="public/gestor.png">
             <span class="project-index">01</span>
             <div class="project-info">
               <a href="https://github.com/Drek003/Gestor-de-Empleados/tree/dev" target="_blank"
-                class="project-title">Gestor de Empleados</a>
+                rel="noopener noreferrer" class="project-title">Gestor de Empleados
+                <i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
               <div class="project-tech">JS · PHP · MySQL</div>
             </div>
           </div>
-          <div class="project-item" data-img="/Portafolio-v2/public/ecommers.png">
+          <div class="project-item reveal spotlight" style="--d: 0.1s" data-img="public/ecommers.png">
             <span class="project-index">02</span>
             <div class="project-info">
-              <a href="https://proyecto-ds-5.vercel.app/" target="_blank" class="project-title">E-Commerce</a>
+              <a href="https://proyecto-ds-5.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-title">E-Commerce <i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
               <div class="project-tech">Astro · JS · CSS</div>
             </div>
           </div>
-          <div class="project-item" data-img="/Portafolio-v2/public/HCB.png">
+          <div class="project-item reveal spotlight" style="--d: 0.2s" data-img="public/HCB.png">
             <span class="project-index">03</span>
             <div class="project-info">
-              <a href="https://drek003.github.io/LandingPage-HCB/" target="_blank" class="project-title">Landing
-                Page</a>
+              <a href="https://drek003.github.io/LandingPage-HCB/" target="_blank" rel="noopener noreferrer"
+                class="project-title">Landing Page <i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
               <div class="project-tech">HTML · CSS · JS</div>
             </div>
           </div>
         </div>
-        <div class="project-preview reveal" id="projectPreview">
-          <img src="" alt="Preview" id="previewImg">
-          <div class="preview-placeholder" id="previewPlaceholder">
-            <i class="bx bx-image-alt"></i>
-            <span>Pasa el cursor sobre un proyecto</span>
+        <div class="project-preview reveal" style="--d: 0.15s" id="projectPreview" aria-hidden="true">
+          <img alt="" id="previewImg" decoding="async">
+          <div class="preview-mock" id="previewMock">
+            <div class="preview-mock-bar"><span></span><span></span><span></span></div>
+            <div class="preview-mock-body">
+              <span class="preview-mock-index" id="mockIndex">01</span>
+              <span class="preview-mock-title" id="mockTitle">Gestor de Empleados</span>
+              <span class="preview-mock-tech" id="mockTech">JS · PHP · MySQL</span>
+            </div>
           </div>
         </div>
       </div>
@@ -203,46 +356,58 @@
             o encontrarme en mis redes profesionales.
           </p>
           <div class="contact-links">
-            <a href="mailto:derek@example.com" class="contact-link">
-              <i class="bx bx-envelope"></i> derek@example.com
+            <a href="mailto:derek@example.com" class="contact-link" id="contactEmail">
+              <i class="bx bx-envelope" aria-hidden="true"></i> derek@example.com
             </a>
-            <a href="https://www.linkedin.com/in/derek-britton-869735320/" target="_blank" class="contact-link">
-              <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/derek-britton-869735320/" target="_blank" rel="noopener noreferrer"
+              class="contact-link">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
             </a>
-            <a href="https://github.com/Drek003" target="_blank" class="contact-link">
-              <i class="fa-brands fa-github"></i> GitHub
+            <a href="https://github.com/Drek003" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
             </a>
           </div>
         </div>
-        <form class="contact-form reveal" onsubmit="event.preventDefault();alert('Mensaje enviado (demo)')">
+        <form class="contact-form reveal" id="contactForm" style="--d: 0.15s" novalidate>
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" id="name" placeholder="Tu nombre" required>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="tu@email.com" required>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea id="message" placeholder="Cuéntame de tu proyecto..." required></textarea>
+            <textarea id="message" name="message" placeholder="Cuéntame de tu proyecto..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:fit-content;">
-            <span>Enviar mensaje</span>
-            <i class="bx bx-send"></i>
-          </button>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary magnetic">
+              <span>Enviar mensaje</span>
+              <i class="bx bx-send" aria-hidden="true"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </section>
 
     <footer class="footer">
-      <p>Diseñado por <span>Derek Britton</span> — 2025</p>
+      <div class="footer-text">
+        <p>Diseñado por <span>Derek Britton</span> — <time id="year">2026</time></p>
+        <p class="footer-credit">Avatar DK3 creado con
+          <a href="https://github.com/smontlouis/bible-strong-avatar-lab" target="_blank" rel="noopener noreferrer">Bible Strong Avatar Lab</a>
+          (AGPL-3.0)</p>
+      </div>
+      <a href="#home" class="back-to-top" aria-label="Volver arriba"><i class="bx bx-up-arrow-alt"
+          aria-hidden="true"></i></a>
     </footer>
 
-  </div>
+  </main>
 
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script type="module" src="avatar.js"></script>
 </body>
 
 </html>
-</｜｜DSML｜｜artifact>
